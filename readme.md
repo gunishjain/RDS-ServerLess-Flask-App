@@ -46,7 +46,7 @@ docker run -d --name flask-app -p 8081:8081 flask-app
 ```
 The container will run on http://localhost:8081
 
-![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/7.JPG "Aurora")
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/9.JPG "Aurora")
 ------------
 ### 5. Accessing the Table using the Endpoints
 A Persons table is already been made using Query Editor on Aurora DB cluster.
@@ -54,10 +54,10 @@ We can query the table and add any person details or fetch any details using the
 
 We can use POSTMAN to test it.
 
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/7.JPG "Aurora")
+
+
 ![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/8.JPG "Aurora")
-
-
-![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/9.JPG "Aurora")
 
 ------------
 
