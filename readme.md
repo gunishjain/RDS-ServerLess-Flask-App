@@ -74,7 +74,7 @@ docker tag test:latest YOURACCOUNT.dkr.ecr.your-region-1.amazonaws.com/YOURREPO:
 ##### iii. Upload
 docker push YOURACCOUNT.dkr.ecr.YOURREGION.amazonaws.com/YOURREPO:YOURTAG
 
-Before Login create a new Policy using the Policy JSON given here [Policy](http://safafafafsaf "Policy")
+Before Login create a new Policy using the Policy JSON given here [Policy](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/Policy.json "Policy")
 
 ![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/10.JPG "Aurora")
 
