@@ -60,6 +60,62 @@ We can use POSTMAN to test it.
 ![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/8.JPG "Aurora")
 
 ------------
+## Integrating Amazon ECR And ECS
+
+### 1.  Uploading Docker Image to Amazon ECR
+Create a new Elastic Container Registry.
+
+##### i. Login to ECR
+aws ecr get-login-password --region your-region | docker login --username AWS --password-stdin ACCOUNTID.dkr.ecr.your-region.amazonaws.com
+
+##### ii. Tag the version
+docker tag test:latest YOURACCOUNT.dkr.ecr.your-region-1.amazonaws.com/YOURREPO:YOURTAG
+
+##### iii. Upload
+docker push YOURACCOUNT.dkr.ecr.YOURREGION.amazonaws.com/YOURREPO:YOURTAG
+
+Before Login create a new Policy using the Policy JSON given here [Policy](http://safafafafsaf "Policy")
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/10.JPG "Aurora")
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/11.JPG "Aurora")
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/12.JPG "Aurora")
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/13.JPG "Aurora")
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/14.JPG "Aurora")
+
+Make sure to note the **Image URI** which will be helpful for Task creation later.
+
+------------
+
+
+### 2.  Creating Cluster in ECS
+We create a cluster and using EC2+ networking for it.
+Make sure to auto assign IP which will be used to access our URL to use our application.
+The cluster will launch an EC2 instance.
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/15.JPG "Aurora")
+
+### 3.  Creating Task in ECS
+Now we will create a task and later deploy it.
+Click on add the container and add the Image URI for it make sure to map the correct ports. In our Case it is 8081:8081
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/16.JPG "Aurora")
+
+![Aurora](https://github.com/gunishjain/RDS-ServerLess-Flask-App/blob/main/SS/17.JPG "Aurora")
+
+After the task has been created we will deploy it by choosing EC2 in the options.
+
+Now we can use the public IP:8081/getPerson to fetch data from the database.
+*If the address is inaccessible make sure to add the port 8081 to inbound in the Security Group.*
+
+
+------------
+
+
+
 
 
 
