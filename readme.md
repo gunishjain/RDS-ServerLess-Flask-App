@@ -1,6 +1,6 @@
 # AWS 2 Tier Architecture Project
 
-##### This is a Flask Based Docker application which interects with Amazon Aurora Serverless using Data API
+##### This is a Flask Based Docker application which interacts with Amazon Aurora Serverless using Data API
 
 It has 2 endpoints: 
 - Create Person
